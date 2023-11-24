@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-custom{
+    display:flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main{
+    width: 95%;
+    padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sidebar-custom{
+    background: #000;
+    color: #fff;
+    height: 100dvh;
+    top: 0;
+    position: sticky;   
+    width: 200px;
+    transition: all 0.5s;
+    align-items: center;
+}
+.top_section{
+    display: flex;
+    align-items:center;
+    padding:25px 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.link{
+    display: flex;
+    color: #fff;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.4s;
+}
+.link:hover{
+    background:rgb(124, 58, 237);
+    color: #000;
+    transition: all 0.5s;
+}
+.active{
+    background: rgb(124, 58, 237);
+    color: #000;
+}
+.link_text{
+    font-size: 15px;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all;
+}
+.link_text .open {
+    width: auto;
+}
+.icon {
+    vertical-align: middle;
+    line-height: 30px;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bars{
+    display: flex;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-right: 5px;
+    transition: all 0.5s;
 }
+
+.logo{
+    display: flex;
+    margin-left: 20px;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        background: linear-gradient(rgb(17, 24, 39), rgb(75, 85, 99))
+    }
+}
+
